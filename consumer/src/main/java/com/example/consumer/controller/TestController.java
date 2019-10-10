@@ -6,6 +6,8 @@ import com.example.common.service.PeopleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 /**
  * @description:
  * @author: chuan
@@ -21,5 +23,10 @@ public class TestController {
     @RequestMapping("/test")
     public People test(){
         return peopleService.getPeople(new People());
+    }
+
+    @RequestMapping("/test2")
+    public Map<String, Object> test2(){
+        return peopleService.test();
     }
 }
